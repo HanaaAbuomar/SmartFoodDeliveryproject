@@ -5,6 +5,9 @@ import java.util.List;
 
 /**
  * Represents a customer's order in the Smart Food Delivery system.
+ * 
+ * @author Hanaa Abuomar
+ * @version 1.0
  */
 public class Order {
     private String orderId;
@@ -65,50 +68,110 @@ public class Order {
 
     // Getters and Setters
 
+    /**
+     * Gets the unique identifier of the order.
+     *
+     * @return the order ID
+     */
     public String getOrderId() {
         return orderId;
     }
 
+    /**
+     * Sets the unique identifier of the order.
+     *
+     * @param orderId the order ID to set
+     */
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
 
+    /**
+     * Gets the customer ID associated with the order.
+     *
+     * @return the customer ID
+     */
     public String getCustomerId() {
         return customerId;
     }
 
+    /**
+     * Sets the customer ID associated with destination order.
+     *
+     * @param customerId the customer ID to set
+     */
     public void setCustomerId(String customerId) {
         this.customerId = customerId;
     }
 
+    /**
+     * Gets the restaurant ID receiving the order.
+     *
+     * @return the restaurant ID
+     */
     public String getRestaurantId() {
         return restaurantId;
     }
 
+    /**
+     * Sets the restaurant ID receiving the order.
+     *
+     * @param restaurantId the restaurant ID to set
+     */
     public void setRestaurantId(String restaurantId) {
         this.restaurantId = restaurantId;
     }
 
+    /**
+     * Gets the list of menu items included in the order.
+     *
+     * @return the list of items
+     */
     public List<MenuItem> getItems() {
         return items;
     }
 
+    /**
+     * Sets the list of menu items for the order.
+     *
+     * @param items the list of items to set
+     */
     public void setItems(List<MenuItem> items) {
         this.items = items;
     }
 
+    /**
+     * Gets the total price of the order.
+     *
+     * @return the total price
+     */
     public double getTotalPrice() {
         return totalPrice;
     }
 
+    /**
+     * Sets the total price of the order.
+     *
+     * @param totalPrice the total price to set
+     */
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
 
+    /**
+     * Gets the current status of the order.
+     *
+     * @return the order status
+     */
     public String getStatus() {
         return status;
     }
 
+    /**
+     * Sets the current status of the order.
+     *
+     * @param status the order status to set
+     */
     public void setStatus(String status) {
         this.status = status;
     }
