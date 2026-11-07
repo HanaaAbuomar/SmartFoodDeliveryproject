@@ -17,6 +17,7 @@ public class Order {
     private double totalPrice;
     private String status; // e.g., "PENDING", "PREPARING", "DELIVERED", "CANCELLED"
     private String driverId; // id of the assigned driver, null until one is assigned
+    private String paymentStatus = "UNPAID"; // UNPAID until a payment is attempted, then SUCCESS or FAILED
 
     /**
      * Default constructor initializing an empty items list.
@@ -193,5 +194,23 @@ public class Order {
      */
     public void setDriverId(String driverId) {
         this.driverId = driverId;
+    }
+
+    /**
+     * Gets the payment status recorded for this order.
+     *
+     * @return "UNPAID", "SUCCESS" or "FAILED"
+     */
+    public String getPaymentStatus() {
+        return paymentStatus;
+    }
+
+    /**
+     * Records the result of a payment attempt.
+     *
+     * @param paymentStatus the payment status to record
+     */
+    public void setPaymentStatus(String paymentStatus) {
+        this.paymentStatus = paymentStatus;
     }
 }
