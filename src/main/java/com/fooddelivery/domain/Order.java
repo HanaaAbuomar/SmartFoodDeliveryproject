@@ -16,6 +16,7 @@ public class Order {
     private List<MenuItem> items;
     private double totalPrice;
     private String status; // e.g., "PENDING", "PREPARING", "DELIVERED", "CANCELLED"
+    private String driverId; // id of the assigned driver, null until one is assigned
 
     /**
      * Default constructor initializing an empty items list.
@@ -174,5 +175,23 @@ public class Order {
      */
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    /**
+     * Gets the id of the driver assigned to this order.
+     *
+     * @return the driver ID, or null if no driver is assigned yet
+     */
+    public String getDriverId() {
+        return driverId;
+    }
+
+    /**
+     * Records the driver assigned to this order.
+     *
+     * @param driverId the driver ID to set
+     */
+    public void setDriverId(String driverId) {
+        this.driverId = driverId;
     }
 }
